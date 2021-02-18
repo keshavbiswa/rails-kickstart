@@ -1,0 +1,296 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+# Defaults
+
+# our custom config
+# TODO: Uncomment it after fix rubocop-todo RSpec/MultipleExpectations
+
+# TODO: Uncomment it after fix rubocop-todo Metrics/LineLength
+# Metrics/LineLength:
+#   Description: 'Limit lines to 100 characters.'
+#   Max: 100
+
+#############################
+
+AllCops:
+  Exclude:
+    - bin/**/*
+    - db/schema.rb
+    - db/migrate/*.rb
+    - db/data/*.rb
+    - node_modules/**/*
+    - tmp/**/*
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  TargetRubyVersion: 2.7.2
+  NewCops: enable
+
+Naming/AccessorMethodName:
+  Description: Check the naming of accessor methods for get_/set_.
+  Enabled: false
+
+Style/AsciiComments:
+  Description: "Use only ascii symbols in comments."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#english-comments"
+  Enabled: false
+
+Style/HashSyntax:
+  Description: "Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax
+    { :a => 1, :b => 2 }."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#collections"
+  Enabled: false
+
+Metrics/BlockNesting:
+  Description: "Avoid excessive block nesting"
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#three-is-the-number-thou-shalt-count"
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Description: "Checks style of children classes and modules."
+  Enabled: false
+  EnforcedStyle: nested
+
+Metrics/ClassLength:
+  Description: "Avoid classes longer than 100 lines of code."
+  Enabled: false
+
+Metrics/ModuleLength:
+  Description: "Avoid modules longer than 100 lines of code."
+  Enabled: false
+
+Style/ClassVars:
+  Description: "Avoid the use of class variables."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-class-vars"
+  Enabled: false
+
+Style/CollectionMethods:
+  Enabled: false
+  PreferredMethods:
+    find: detect
+    inject: reduce
+    collect: map
+    find_all: select
+
+Metrics/AbcSize:
+  Description: >-
+    A calculated magnitude based on number of assignments,
+    branches, and conditions.
+  Enabled: false
+
+# TODO: Uncomment it after fix rubocop-todo Metrics/BlockLength
+Metrics/BlockLength:
+  CountComments: false # count full line comments?
+  IgnoredMethods: []
+  Exclude:
+    - "spec/**/*"
+    - "config/routes.rb"
+
+Metrics/CyclomaticComplexity:
+  Description: >-
+    A complexity metric that is strongly correlated to the number
+    of test cases needed to validate a method.
+  Enabled: false
+
+Style/Documentation:
+  Description: "Document classes and non-namespace modules."
+  Enabled: false
+
+# Checks whether the source file has a utf-8 encoding comment or not
+# AutoCorrectEncodingComment must match the regex
+# /#.*coding\s?[:=]\s?(?:UTF|utf)-8/
+Style/Encoding:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Description: >-
+    Add the frozen_string_literal comment to the top of files
+    to help transition from Ruby 2.3.0 to Ruby 3.0.
+  Enabled: false
+
+Style/FormatString:
+  Description: "Enforce the use of Kernel#sprintf, Kernel#format or String#%."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#sprintf"
+  Enabled: false
+
+Style/GlobalVars:
+  Description: "Do not introduce global variables."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#instance-vars"
+  Reference: "http://www.zenspider.com/Languages/Ruby/QuickRef.html"
+  Enabled: false
+
+Style/InlineComment:
+  Description: "Avoid inline comments."
+  Enabled: false
+
+Metrics/MethodLength:
+  Description: "Avoid methods longer than 10 lines of code."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#short-methods"
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Description: "Avoid multi-line chains of blocks."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#single-line-blocks"
+  Enabled: false
+
+Style/Next:
+  Description: "Use `next` to skip iteration instead of a condition at the end."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-nested-conditionals"
+  Enabled: false
+
+Style/RedundantSelf:
+  Description: "Redundant `self` detected."
+  StyleGuide: "https://github.com/rubocop-hq/ruby-style-guide#no-self-unless-required"
+  Enabled: false
+
+Naming/BinaryOperatorParameterName:
+  Description: "When defining binary operators, name the argument other."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#other-arg"
+  Enabled: false
+
+Metrics/ParameterLists:
+  Description: "Avoid parameter lists longer than three or four parameters."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#too-many-params"
+  Enabled: false
+
+Naming/PredicateName:
+  Description: "Check the names of predicate methods."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#bool-methods-qmark"
+  ForbiddenPrefixes:
+    - is_
+  Exclude:
+    - spec/**/*
+
+Style/RegexpLiteral:
+  Description: "Use / or %r around regular expressions."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#percent-r"
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Description: "Enforces the names of some block params."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#reduce-blocks"
+  Enabled: false
+
+Style/SignalException:
+  Description: "Checks for proper usage of fail and raise."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#fail-method"
+  Enabled: false
+
+Style/StringLiterals:
+  Description: "Checks if uses of quotes match the configured preference."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#consistent-string-literals"
+  EnforcedStyle: double_quotes
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Description: "Checks for trailing comma in argument lists."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas"
+  EnforcedStyleForMultiline: comma
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Description: "Checks for trailing comma in array literals."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas"
+  EnforcedStyleForMultiline: comma
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Description: "Checks for trailing comma in hash literals."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas"
+  EnforcedStyleForMultiline: no_comma
+  Enabled: false
+
+Style/TrivialAccessors:
+  Description: "Prefer attr_* methods to trivial readers/writers."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#attr_family"
+  Enabled: false
+
+Style/ClassCheck:
+  Description: "Enforces consistent use of `Object#is_a?` or `Object#kind_of?`."
+  Enabled: false
+
+# Layout
+
+Layout/ConditionPosition:
+  Description: >-
+    Checks for condition placed in a confusing position relative to
+    the keyword.
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#same-line-condition"
+  Enabled: false
+
+Layout/DotPosition:
+  Description: "Checks the position of the dot in multi-line method calls."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains"
+  EnforcedStyle: trailing
+
+Layout/ExtraSpacing:
+  Description: "Do not use unnecessary spacing."
+  Enabled: false
+
+Layout/MultilineOperationIndentation:
+  Description: >-
+    Checks indentation of binary operations that span more than
+    one line.
+  Enabled: false
+  EnforcedStyle: indented
+
+Layout/MultilineMethodCallIndentation:
+  Description: >-
+    Checks indentation of method calls with the dot operator
+    that span more than one line.
+  Enabled: false
+  EnforcedStyle: indented
+
+Layout/InitialIndentation:
+  Description: >-
+    Checks the indentation of the first non-blank non-comment line in a file.
+  Enabled: false
+
+Layout/TrailingWhitespace:
+  Description: "Avoid trailing whitespace."
+  StyleGuide: "#no-trailing-whitespace"
+  Enabled: false
+
+# Lint
+
+Lint/NonLocalExitFromIterator:
+  Description: "Do not use return in iterator to cause non-local exit."
+  Enabled: false
+
+# RSpec cops from rubocop-rspec
+# https://github.com/rubocop-hq/rubocop-rspec/blob/master/config/default.yml
+
+RSpec/ExampleLength:
+  Description: Checks for long examples.
+  Enabled: true
+  Max: 15
+  StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ExampleLength
+
+RSpec/MultipleExpectations:
+  Max: 1
+  Exclude:
+    - "spec/features/**/*"
+    - "spec/requests/**/*"
+  StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/MultipleExpectations
+
+RSpec/DescribeClass:
+  Description: Check that the first argument to the top level describe is a constant.
+  StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/DescribeClass
+  Exclude:
+    - spec/features/**/*
+    - spec/requests/*
+
+RSpec/EmptyExampleGroup:
+  Description: 'Checks if an example group does not include any tests.'
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 6
+
+RSpec/MessageChain:
+  Description: Avoid stubbing using `receive_message_chain`.
+  StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/MessageChain
+  

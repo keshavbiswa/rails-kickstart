@@ -58,7 +58,7 @@ group :development do
   gem 'rubocop-performance', '~> 1.9', '>= 1.9.2' # Rubocop for rspec
   gem 'rubocop-rails', '~> 2.9', '>= 2.9.1' # Rubocop for rails
 
-  # gem 'annotate', '~> 3.0', '>= 3.0.3'
+  gem 'annotate', '~> 3.0', '>= 3.0.3'
 end
 
 # group :test do

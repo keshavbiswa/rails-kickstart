@@ -9,6 +9,8 @@ import "channels"
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 require("stylesheets/application.scss")
+require("jquery")
+require("@nathanvda/cocoon")
 
 Rails.start()
 Turbolinks.start()

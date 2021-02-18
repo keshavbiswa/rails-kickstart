@@ -31,8 +31,9 @@ gem 'clockwork', '~> 2.0', '>= 2.0.4'
 gem 'devise', '~> 4.7', '>= 4.7.3' # Flexible authentication solution for Rails with Warden
 
 
-# # Form helpers
-# gem 'simple_form', '~> 5.0', '>= 5.0.3'
+# Form helpers
+gem 'simple_form', '~> 5.1' # Forms made easy!
+gem 'cocoon', '~> 1.2', '>= 1.2.15' # Unobtrusive nested forms handling, using jQuery
 
 # Managing ENV
 gem 'figaro', '~> 1.1', '>= 1.1.1'

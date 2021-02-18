@@ -13,11 +13,18 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 
+
+# Database and migrations
+gem 'strong_migrations', '~> 0.7.6' # Catch unsafe migrations in development
+gem 'data_migrate', '~> 6.0', '>= 6.0.5' # Data Migration
+
+gem 'rails-erd', '~> 1.6', '>= 1.6.1', group: :development
+gem 'active_record_doctor', '~> 1.7', '>= 1.7.1', group: :development
+
+
 # # Background Processing
 # gem 'sidekiq', '~> 6.0', '>= 6.0.3'
 
-# # Catch unsafe migrations in development
-# gem 'strong_migrations'
 
 # # Form helpers
 # gem 'simple_form', '~> 5.0', '>= 5.0.3'

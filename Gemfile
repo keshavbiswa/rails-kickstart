@@ -61,14 +61,14 @@ group :development do
   gem 'annotate', '~> 3.0', '>= 3.0.3'
 end
 
-# group :test do
-gem 'database_cleaner', '~> 1.7' # Strategies for cleaning databases in Ruby.
-gem 'launchy', '~> 2.4', '>= 2.4.3' # Helper for launching cross-platform applications in a fire and forget manner
-gem 'shoulda-callback-matchers', '~> 1.1', '>= 1.1.4' # Test existence of your Rails callbacks without having to call them
-gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2' # Making tests easy on the fingers and eyes
-gem 'simplecov', '~> 0.17.1', require: false # Code coverage for Ruby with a powerful configuration library and automatic merging of coverage across test suites
-gem 'timecop', '~> 0.9.1'
-gem 'rspec-sidekiq', '~> 3.0', '>= 3.0.3'
-# end
+group :test do
+  gem 'database_cleaner', '~> 1.7' # Strategies for cleaning databases in Ruby.
+  gem 'launchy', '~> 2.4', '>= 2.4.3' # Helper for launching cross-platform applications in a fire and forget manner
+  gem 'shoulda-callback-matchers', '~> 1.1', '>= 1.1.4' # Test existence of your Rails callbacks without having to call them
+  gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2' # Making tests easy on the fingers and eyes
+  gem 'simplecov', '~> 0.17.1', require: false # Code coverage for Ruby with a powerful configuration library and automatic merging of coverage across test suites
+  gem 'timecop', '~> 0.9.1'
+  gem 'rspec-sidekiq', '~> 3.0', '>= 3.0.3'
+end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

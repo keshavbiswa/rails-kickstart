@@ -11,7 +11,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+<body class="text-center">
+    <div class="masthead d-flex h-100 p-3 mx-auto flex-column">
+      <%= render "shared/application_nav" %>
+      <%= yield %>
+      <%= render "shared/application_footer"%>
+    </div>
   </body>
 </html>

@@ -21,5 +21,12 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Public Methods" do
+    describe "#name" do
+      it "returns name of user" do
+        user = create(:user, first_name: 'Keshav', last_name: 'Biswa')
+        expect(user.name).to eq("Keshav Biswa")
+      end
+    end
+  end
 end

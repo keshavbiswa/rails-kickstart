@@ -43,11 +43,11 @@ group :development, :test do
   gem 'pry-byebug', '~> 3.7'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
-  gem 'rspec-core', '~> 3.9'
-  gem 'rspec-expectations', '~> 3.9'
-  gem 'rspec-mocks', '~> 3.9'
-  gem 'rspec-rails', '~> 3.9'
-  gem 'rspec-support', '~> 3.9'
+  gem 'rspec-core', '~> 3.10', '>= 3.10.1'
+  gem 'rspec-expectations', '~> 3.10', '>= 3.10.1'
+  gem 'rspec-mocks', '~> 3.10', '>= 3.10.2'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
+  gem 'rspec-support', '~> 3.10', '>= 3.10.2'
   gem 'faker', '~> 2.7' # Generate fake datas
 end
 
@@ -70,7 +70,7 @@ group :development do
 end
 
 group :test do
-  gem 'database_cleaner', '~> 1.7' # Strategies for cleaning databases in Ruby.
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.1' # Strategies for cleaning databases in Ruby.
   gem 'launchy', '~> 2.4', '>= 2.4.3' # Helper for launching cross-platform applications in a fire and forget manner
   gem 'shoulda-callback-matchers', '~> 1.1', '>= 1.1.4' # Test existence of your Rails callbacks without having to call them
   gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2' # Making tests easy on the fingers and eyes

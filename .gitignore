@@ -42,3 +42,7 @@ yarn-debug.log*
 # Ignore coverage files
 /coverage
 /spec/examples.txt
+
+# Ignore pdfs
+
+erd.pdf

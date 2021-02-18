@@ -24,6 +24,7 @@ AllCops:
     - db/data/*.rb
     - node_modules/**/*
     - tmp/**/*
+    - config/**/*
   DisplayStyleGuide: true
   ExtraDetails: true
   TargetRubyVersion: 2.7.2

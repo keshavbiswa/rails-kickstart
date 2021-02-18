@@ -22,5 +22,14 @@ Bundler.require(*Rails.groups)
 module RailsKickstart
   class Application < Rails::Application
     config.load_defaults 6.1
+
+    config.generators do |g|
+      g.test_framework :rspec
+      g.helper_specs false
+      g.controller_specs false
+      g.view_specs false
+      g.routing_specs false
+      g.request_specs true
+    end
   end
 end

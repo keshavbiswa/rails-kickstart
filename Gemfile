@@ -66,6 +66,7 @@ group :development do
 
   gem 'foreman', '~> 0.87.2', require: false # Manage Procfile-based applications
   gem 'brakeman', '~> 5.0' # A static analysis tool which checks Ruby on Rails applications for security vulnerabilities.
+  gem 'bullet', '~> 6.1', '>= 6.1.3'
 end
 
 group :test do

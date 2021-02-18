@@ -24,7 +24,7 @@ gem 'clockwork', '~> 2.0', '>= 2.0.4' # Recurring Jobs
 
 # Authentication and authorization
 gem 'devise', '~> 4.7', '>= 4.7.3' # Flexible authentication solution for Rails with Warden
-
+gem 'rolify', '~> 5.3' # Very simple Roles library without any authorization enforcement supporting scope on resource object.
 
 # Form helpers
 gem 'simple_form', '~> 5.1' # Forms made easy!

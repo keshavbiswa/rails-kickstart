@@ -59,6 +59,8 @@ group :development do
   gem 'rubocop-rails', '~> 2.9', '>= 2.9.1' # Rubocop for rails
 
   gem 'annotate', '~> 3.0', '>= 3.0.3'
+
+  gem 'foreman', '~> 0.87.2', require: false # Manage Procfile-based applications
   gem 'brakeman', '~> 5.0' # A static analysis tool which checks Ruby on Rails applications for security vulnerabilities.
 end
 

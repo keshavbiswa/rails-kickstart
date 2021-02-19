@@ -1,18 +1,21 @@
 <h2>Forgot your password?</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+<div class="card w-50 mx-auto">
+  <div class="card-body">
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+      </div>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+      <div class="form-actions">
+        <%= f.button :submit, "Send me reset password instructions", class: 'btn btn-secondary' %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
+  <div class="card-footer text-muted">
+    <%= render "devise/shared/links" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

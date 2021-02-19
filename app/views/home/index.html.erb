@@ -1,2 +1,219 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Rails Kickstart</h1>
+    <p class="lead">Kick start rails application with this very opinionated template.</p>
+  </div>
+</div>
+
+<div class="container" id="description">
+  <h2>Description</h2>
+
+  <p class="bd-lead">
+    After generating multiple Rails applications I realised the best way to generate a new Rails application is to have a template with good configured defaults.
+    This is a new Rails application template with all the required libraries to kickstart a new Rails application with all the tried and tested libraries already installed and configured.
+  </p>
+</div>
+
+<hr class="my-4">
+
+<div class="container" id="installation">
+  <h2>Installation</h2>
+
+  <p class="bd-lead">
+    To set up rails-kickstart on your local environment. Follow these steps
+  </p>
+
+  <ul>
+    <li>
+      <h4>Setup Ruby</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><kbd>brew install rbenv</kbd></li>
+        <li class="list-group-item"><kbd>rbenv init</kbd></li>
+        <li class="list-group-item"><kbd>ls -a ~</kbd></li>
+        <li class="list-group-item"><kbd>rbenv install 2.6.2</kbd></li>
+      </ul>
+    </li>
+    <li>
+      <h4> Install Rails</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><kbd>gem install bundler</kbd></li>
+        <li class="list-group-item"><kbd>gem install rails -v 6.1.0</kbd></li>
+      </ul>
+    </li>
+    <li>
+      <h4>Install Postgresql</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><kbd>brew services start postgresql</kbd></li>
+        <li class="list-group-item"><kbd>brew services start postgresql</kbd></li>
+      </ul>
+    </li>
+
+    <li>
+      <h4>Install Redis</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><kbd>brew install redis</kbd></li>
+        <li class="list-group-item"><kbd>brew services start redis</kbd></li>
+      </ul>
+    </li>
+
+    <li>
+      <h4>Clone the repo</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><kbd>git clone git@github.com:meeeerkat/rails-kickstart.git</kbd></li>
+      </ul>
+    </li>
+    <li>
+      <h4>Setup rails</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><kbd> <kbd>bin/setup</kbd></kbd></li>
+      </ul>
+    </li>
+    <li>
+      <h4>Install dependencies</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><kbd> <kbd>yarn install</kbd></kbd></li>
+      </ul>
+    </li>
+
+    <li>
+      <h4>Run servers</h4>
+      <ul class="list-group list-group-flush text-secondary">
+        <li class="list-group-item"><kbd> <kbd>foreman start -f Procfile.dev</kbd></kbd></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<hr class="my-4">
+
+<div class="container" id="libraries">
+  <h2>Libraries in this template</h2>
+
+  <p class="bd-lead">
+    This template comes with a variety of libraries to increase productivity and performance.
+  </p>
+
+  <ul>
+    <li class="lead">
+      Authentication and Authorization
+      <ul>
+        <li><a href="https://github.com/heartcombo/devise">Devise</a>: Flexible authentication solution for Rails with Warden</li>
+        <li><a href="https://github.com/varvet/pundit">Pundit</a>: Object oriented authorization for Rails applications</li>
+        <li><a href="https://github.com/RolifyCommunity/rolify">Rolify</a>: Very simple Roles library without any authorization enforcement supporting scope on resource object.</li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li class="lead">
+      Databases and migrations
+      <ul>
+        <li>
+          <a href="https://github.com/ankane/strong_migrations">Strong Migrations</a>: Catch unsafe migrations in development</li>
+        <li>
+          <a href="https://github.com/ilyakatz/data-migrate">Data Migrate</a>: Run data migrations alongside schema migrations.
+        </li>
+        <li>
+          <a href="https://github.com/voormedia/rails-erd">Rails ERD</a>: Generate Entity-Relationship Diagrams for Rails applications
+        </li>
+        <li>
+          <a href="https://github.com/gregnavis/active_record_doctor">ActiveRecord Doctor</a>: Keeps the database in a good shape
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li class="lead">
+      Background Jobs
+      <ul>
+        <li>
+          <a href="https://github.com/mperham/sidekiq">Sidekiq</a>: Simple, efficient background processing for Ruby.
+        </li>
+        <li>
+          <a href="https://github.com/Rykian/clockwork">ClockWork</a>: a clock process to replace cron
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li class="lead">
+      Code Quality and linters
+      <ul>
+        <li>
+          <a href="https://github.com/rubocop-hq/rubocop">Rubocop</a>: A Ruby static code analyzer and formatter, based on the community Ruby style guide.
+        </li>
+        <li>
+          <a href="https://typicode.github.io/husky/#/">Husky</a>: Git hooks made easy
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li class="lead">
+      Utilities
+      <ul>
+        <li>
+          <a href="https://github.com/laserlemon/figaro">Figaro</a>: Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+        </li>
+        <li>
+          <a href="https://github.com/ctran/annotate_models">Annotate Models</a>: Add a comment summarizing the current schema
+        </li>
+        <li>
+          <a href="https://github.com/heartcombo/simple_form">SimpleForm</a>: Forms made easy
+        </li>
+        <li>
+          <a href="https://github.com/nathanvda/cocoon">Cocoon</a>: Unobtrusive nested forms handling, using jQuery
+        </li>
+        <li>
+          <a href="https://github.com/drapergem/draper">Draper</a>: Object-oriented layer of presentation logic
+        </li>
+        <li>
+          <a href="https://github.com/flyerhzm/bullet">Bullet</a>: help to kill N+1 queries and unused eager loading.
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li class="lead">
+      Debuggers
+      <ul>
+        <li>
+          <a href="https://github.com/rweng/pry-rails">Pry</a>: Runtime developer console and IRB alternative
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li class="lead">
+      Security
+      <ul>
+        <li>
+          <a href="https://github.com/presidentbeef/brakeman">Brakeman</a>: A static analysis tool which checks Ruby on Rails applications for security vulnerabilities.
+        </li>
+        <li>
+          <a href="https://github.com/civisanalytics/ruby_audit">RubyAudit</a>: Checks your current version of Ruby and RubyGems against known security vulnerabilities (CVEs).
+        </li>
+        <li>
+          <a href="https://github.com/rubysec/bundler-audit#readme">BundlerAudit</a>: bundler-audit provides patch-level verification for Bundled apps.
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li class="lead">
+      Tests
+      <ul>
+        <li>
+          <a href="https://rspec.info/">RSpecs</a>: Behaviour Driven Development for Ruby.
+        </li>
+        <li>
+          <a href="https://github.com/thoughtbot/factory_bot_rails">FactoryBot</a>: factory_bot provides a framework and DSL for defining and using factories - less error-prone, more explicit, and all-around easier to work with than fixtures.
+        </li>
+        <li>
+          <a href="https://github.com/faker-ruby/faker">Faker</a>: A port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<hr class="my-4">

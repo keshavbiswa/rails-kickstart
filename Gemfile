@@ -67,6 +67,8 @@ group :development do
 
   gem 'foreman', '~> 0.87.2', require: false # Manage Procfile-based applications
   gem 'brakeman', '~> 5.0' # A static analysis tool which checks Ruby on Rails applications for security vulnerabilities.
+  gem 'ruby_audit', '~> 1.3' # Checks your current version of Ruby and RubyGems against known security vulnerabilities (CVEs)
+  gem 'bundler-audit', '~> 0.7.0.1' # bundler-audit provides patch-level verification for Bundled apps.
   gem 'bullet', '~> 6.1', '>= 6.1.3'
 end
 
